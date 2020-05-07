@@ -18,7 +18,7 @@ function StateWiseTable() {
           <tr key={key}>
             <td>{key}</td>
             <td>{value.active}</td>
-            <td>{value.confirmed}</td>
+            <td className="confirmed">{value.confirmed}</td>
             <td>{value.recovered}</td>
             <td>{value.deceased}</td>
           </tr>
@@ -29,30 +29,35 @@ function StateWiseTable() {
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>{districtData[currentState] ? currentState : "STATES"}</th>
-          <th>ACTIVE</th>
-          <th>CONFIRMED</th>
-          <th>RECOVERED</th>
-          <th>DEATHS</th>
-        </tr>
-      </thead>
-      <tbody>
-        {districtData[currentState]
-          ? districtTable()
-          : stateData.map((state) => (
-              <tr key={state.statecode}>
-                <td>{state.state}</td>
-                <td>{state.active}</td>
-                <td>{state.confirmed}</td>
-                <td>{state.recovered}</td>
-                <td>{state.deaths}</td>
-              </tr>
-            ))}
-      </tbody>
-    </table>
+    <>
+    <p className="table-heading">
+      {currentState == "Total" ? "STATE" : "DISTRICT"} WISE DATA
+    </p>
+      <table>
+        <thead>
+          <tr>
+            <th>{districtData[currentState] ? currentState : "STATES"}</th>
+            <th>ACTIVE</th>
+            <th className="confirmed">CONFIRMED</th>
+            <th>RECOVERED</th>
+            <th>DEATHS</th>
+          </tr>
+        </thead>
+        <tbody>
+          {districtData[currentState]
+            ? districtTable()
+            : stateData.map((state) => (
+                <tr key={state.statecode}>
+                  <td>{state.state}</td>
+                  <td>{state.active}</td>
+                  <td className="confirmed">{state.confirmed}</td>
+                  <td>{state.recovered}</td>
+                  <td>{state.deaths}</td>
+                </tr>
+              ))}
+        </tbody>
+      </table>
+    </>
   );
 }
 
