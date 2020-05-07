@@ -3,9 +3,8 @@ import React from "react";
 function Question({question , answer}) {
   let firstRef = React.createRef();
   function toggleNav(e) {
-    e.target.classList.toggle("active");
-    const button = firstRef.current;
-    button.classList.toggle("content-active");
+    e.target.classList.toggle("qactive");
+    firstRef.current.classList.toggle("content-active");
   }
 
   return (

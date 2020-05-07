@@ -17,7 +17,23 @@ html {
   scroll-behavior: smooth;
 }
 
+a{
+  text-decoration: none;
+}
+
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+img{
+  margin : 30px 20px 10px;
+  max-width: 100vw;
+
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
 header {
   position: absolute;
@@ -203,7 +219,15 @@ form span {
 .red {
   background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
 }
-
+.blue-text{
+  color: #6e45e2;
+}
+.green-text{
+  color: #43e97b;
+}
+.red-text{
+  color: #ff0844;
+}
 .lines {
   color: #6d6e73;
   width: 90%;
@@ -258,7 +282,7 @@ form span {
     display: flex;
     position: relative;
     right: 5%;
-    border: 3px solid whitesmoke;
+    border: 1px solid #252525;
     border-radius: 3px;
     padding: 8px 16px;
     background: white;
@@ -421,7 +445,7 @@ table thead th {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
+.qactive,
 .collapsible:hover {
   background-color: #b2b2b2;
 }
@@ -447,7 +471,7 @@ table thead th {
   margin-left: 5px;
 }
 
-.active:after {
+.qactive:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 

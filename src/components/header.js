@@ -24,7 +24,7 @@ function Header() {
         <Link to="/form">
           <li className="navlink" onClick={toggleNav}>
             
-            CONTRIBUTE
+           Detail
           </li>
         </Link>
         <Link to="/faq">

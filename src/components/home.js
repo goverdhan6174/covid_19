@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import img from "./pic.png";
 
 import Cards from "./cards";
 import SelectState from "./selectState";
@@ -40,6 +41,7 @@ function Home() {
     <section className="container">
       <SelectState />
       <Cards />
+      <img src={img} alt="Ministry of Health and Family Welfare Government of India" / >
       <p className="lines">
         Government of India is taking all necessary steps to ensure that we are
         prepared well to face the challenge and threat posed by the growing
@@ -50,6 +52,7 @@ function Home() {
         precautions as per the advisories being issued by Ministry of Health &
         Family Welfare.
       </p>
+      
       <StateWiseTable />
     </section>
   ) : (

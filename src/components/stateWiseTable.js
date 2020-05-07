@@ -17,10 +17,10 @@ function StateWiseTable() {
         arr.push(
           <tr key={key}>
             <td>{key}</td>
-            <td>{value.active}</td>
+            <td className="blue-text">{value.active}</td>
             <td className="confirmed">{value.confirmed}</td>
-            <td>{value.recovered}</td>
-            <td>{value.deceased}</td>
+            <td className="blue-text">{value.recovered}</td>
+            <td className="blue-text">{value.deceased}</td>
           </tr>
         );
       }
@@ -49,10 +49,10 @@ function StateWiseTable() {
             : stateData.map((state) => (
                 <tr key={state.statecode}>
                   <td>{state.state}</td>
-                  <td>{state.active}</td>
-                  <td className="confirmed">{state.confirmed}</td>
-                  <td>{state.recovered}</td>
-                  <td>{state.deaths}</td>
+                  <td className = "blue-text">{state.active}</td>
+                  <td className="confirmed blue-text">{state.confirmed}</td>
+                  <td className = "green-text">{state.recovered}</td>
+                  <td className="red-text">{state.deaths}</td>
                 </tr>
               ))}
         </tbody>
